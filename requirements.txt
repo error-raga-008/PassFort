@@ -1,0 +1,68 @@
+# Core Streamlit Framework
+streamlit>=1.28.0
+
+# Data Manipulation and Analysis
+pandas>=1.5.3
+numpy>=1.24.3
+
+# Database
+sqlite3  # Built-in with Python, no installation needed
+
+# Cryptography and Security
+cryptography>=41.0.0
+pyotp>=2.8.0
+qrcode>=7.4.2
+Pillow>=10.0.0
+
+# Email functionality
+smtplib  # Built-in with Python, no installation needed
+
+# Visualization
+plotly>=5.15.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Authentication and OAuth (if needed for future Google OAuth integration)
+authlib>=1.2.1
+
+# Utilities
+requests>=2.31.0
+
+# Additional Security
+bcrypt>=4.0.1
+hashlib  # Built-in with Python, no installation needed
+
+# JSON handling
+json  # Built-in with Python, no installation needed
+
+# Date and Time
+datetime  # Built-in with Python, no installation needed
+
+# String operations
+string  # Built-in with Python, no installation needed
+
+# Regular expressions
+re  # Built-in with Python, no installation needed
+
+# Random number generation
+random  # Built-in with Python, no installation needed
+
+# File operations
+os  # Built-in with Python, no installation needed
+io  # Built-in with Python, no installation needed
+
+# Base64 encoding
+base64  # Built-in with Python, no installation needed
+
+# Time operations
+time  # Built-in with Python, no installation needed
+
+# Development and Testing (Optional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Production Server (Optional)
+gunicorn>=21.0.0
