@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassFort - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css', v='1.2') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-text">PassFort</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="{{ url_for('home') }}"><i class="fa-solid fa-home"></i> <span class="nav-text">Home</span></a></li>
+                    <li><a href="{{ url_for('dashboard') }}"><i class="fa-solid fa-th-large"></i> <span class="nav-text">DashBoard</span></a></li>
+                    <li><a href="{{ url_for('add_password') }}"><i class="fa-solid fa-plus"></i> <span class="nav-text">Add Password</span></a></li>
+                    <li><a href="{{ url_for('password_manager') }}"><i class="fa-solid fa-key"></i> <span class="nav-text">Password Manager</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-settings">
+                    <i class="fa-solid fa-cog"></i> <span class="btn-text">Settings</span>
+                </button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header home-header">
+                <div class="logo">PassFort</div>
+                <nav class="auth-nav">
+                    <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+                    <a href="{{ url_for('signup') }}" class="btn btn-primary">Sign Up</a>
+                </nav>
+            </header>
+            <div class="landing-container">
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Secure your digital life with Passfort: Your trusted password manager.</h1>
+                        <p>Effortlessly manage, store, and protect your passwords with our intuitive and secure solution.</p>
+                        <div class="hero-buttons">
+                            <a href="{{ url_for('login') }}" class="btn btn-primary">Get Started</a>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature-section">
+                    <div class="feature-content">
+                        <h2>Effortless Password Generation at Your Fingertips</h2>
+                        <p>Passfort's Automatic Password Generation creates strong, unique passwords for all your accounts with just a click.</p>
+                        <button class="btn btn-secondary">Generate Password</button>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop" alt="Code on a screen">
+                    </div>
+                </section>
+
+                <section class="full-width-image-section">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="People working on computers">
+                    <h2>Discover the Simple Steps to Secure Your Passwords with Passfort</h2>
+                </section>
+
+                <section class="three-card-section">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=1974&auto=format&fit=crop" alt="Illustration of a person on a laptop">
+                        <h3>Effortlessly Manage and Protect Your Digital Life with Passfort</h3>
+                        <p>Passfort simplifies password management, ensuring your accounts are safe and accessible.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1632276536838-b179393135d3?q=80&w=1974&auto=format&fit=crop" alt="Illustration of a person walking through a digital landscape">
+                        <h3>Step-by-Step Guidance for Seamless Password Management and Security</h3>
+                        <p>Follow our intuitive process to safeguard your passwords effortlessly.</p>
+                        <a href="#" class="learn-more">Sign Up <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1616594439054-a45a765a418d?q=80&w=2070&auto=format&fit=crop" alt="Illustration of a person typing on a keyboard">
+                        <h3>Experience Advanced Security Features Tailored for Your Needs</h3>
+                        <p>Enjoy peace of mind with Passfort's cutting-edge encryption and security protocols.</p>
+                        <a href="#" class="learn-more">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </section>
+
+                <section class="key-features-section">
+                    <div class="key-features-content">
+                        <h2>Discover Our Key Features</h2>
+                        <p>Passfort offers a suite of powerful features designed to keep your passwords safe and accessible. Experience the ultimate in password management with our innovative solutions.</p>
+                        <div class="key-features-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-secondary">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="key-features-grid">
+                        <div class="feature-item">
+                            <h4>Secure Storage</h4>
+                            <p>Keep your passwords encrypted and safe.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Cross-Platform Sync</h4>
+                            <p>Access your passwords from any device, anytime.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>User-Friendly Interface</h4>
+                            <p>Navigate effortlessly with our intuitive design.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Why Choose Passfort?</h4>
+                            <p>Experience unmatched security and convenience.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="landing-footer">
+                    <div class="footer-content">
+                        <div class="logo">PassFort</div>
+                        <div class="footer-links">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Guide</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Passfort All rights reserved.</p>
+                        <div class="footer-legal">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Cookies Settings</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

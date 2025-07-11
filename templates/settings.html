@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - PassFort</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-text">PassFort</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><i class="fa-solid fa-home"></i> <span class="nav-text">Home</span></a></li>
+                    <li><a href="{{ url_for('dashboard') }}"><i class="fa-solid fa-th-large"></i> <span class="nav-text">Dashboard</span></a></li>
+                    <li><a href="{{ url_for('add_password') }}"><i class="fa-solid fa-plus"></i> <span class="nav-text">Add Password</span></a></li>
+                    <li><a href="{{ url_for('password_manager') }}"><i class="fa-solid fa-key"></i> <span class="nav-text">Password Manager</span></a></li>
+                    <li class="active"><a href="{{ url_for('settings') }}"><i class="fa-solid fa-cog"></i> <span class="nav-text">Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="{{ url_for('logout') }}" class="btn-settings">
+                    <i class="fa-solid fa-sign-out-alt"></i> <span class="btn-text">Logout</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Settings</h1>
+            </header>
+            <div class="settings-container" style="padding:2rem;">
+                <div class="setting-item">
+                    <label for="theme-toggle">Dark Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

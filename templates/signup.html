@@ -1,0 +1,51 @@
+<!-- signup.html: User registration form template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PassFort</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container-split">
+        <div class="auth-panel-left">
+            <div class="auth-panel-content">
+                <h2>Create Your Account</h2>
+                <p>Join us to secure your digital life.</p>
+            </div>
+        </div>
+        <div class="auth-panel-right">
+            <div class="auth-box">
+                <h3>Sign Up</h3>
+                <form id="signup-form" class="auth-form active" action="{{ url_for('signup') }}" method="POST">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Sign Up</button>
+                </form>
+                <div style="text-align:center; margin: 20px 0;">
+                    <a href="{{ url_for('google_login') }}" class="btn-auth" style="background:#4285F4; color:#fff; display:inline-block; width:auto; padding:10px 24px; font-size:16px; margin-top:10px;">
+                        <i class="fa-brands fa-google"></i> Sign Up with Google
+                    </a>
+                </div>
+                <p class="auth-switch">Already have an account? <a href="{{ url_for('login') }}">Sign In</a></p>
+                <div style="text-align:center; margin-top:20px;">
+                    <a href="{{ url_for('home') }}" class="btn btn-secondary">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- setup_2fa.html: Template for configuring and verifying TOTP 2FA setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup 2FA - PassFort</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="auth-container-split">
+        <div class="auth-panel-left">
+            <div class="auth-panel-content">
+                <h2>Secure Your Account</h2>
+                <p>Set up two-factor authentication for an extra layer of security.</p>
+            </div>
+        </div>
+        <div class="auth-panel-right">
+            <div class="auth-box">
+                <h3>Setup 2FA</h3>
+                <p style="text-align: center; margin-bottom: 20px;">1. Scan this QR code with your authenticator app:</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+                </div>
+                <form action="{{ url_for('verify_2fa') }}" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="code" placeholder="Enter 6-digit code" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Verify</button>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <div class="flash-messages" style="text-align: center; margin-top: 20px; color: red;">
+                      {% for message in messages %}
+                        <p>{{ message }}</p>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

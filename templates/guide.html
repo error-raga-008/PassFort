@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - PassFort</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <a href="{{ url_for('dashboard') }}" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+    <div class="guide-container" style="padding: 2rem; max-width: 800px; margin: auto;">
+        <h1 class="guide-title" style="color: var(--accent-color); margin-bottom: 1.5rem;">PassFort Guide</h1>
+        <section class="guide-section" style="margin-bottom: 1.5rem;">
+            <h2 style="margin-bottom: 0.5rem;">Context</h2>
+            <p>PassFort is a secure password manager that helps you store, manage, and quickly access your passwords in a safe, encrypted environment.</p>
+        </section>
+        <section class="guide-section" style="margin-bottom: 1.5rem;">
+            <h2 style="margin-bottom: 0.5rem;">Add a Password</h2>
+            <ol style="padding-left: 1.2rem;">
+                <li>Click <strong>Add Password</strong> in the sidebar.</li>
+                <li>Enter the website URL, username, your desired password, a 4-digit safety key, and an optional note.</li>
+                <li>Click <strong>Save</strong> to encrypt and store your entry.</li>
+            </ol>
+        </section>
+        <section class="guide-section" style="margin-bottom: 1.5rem;">
+            <h2 style="margin-bottom: 0.5rem;">Manage Passwords</h2>
+            <ol style="padding-left: 1.2rem;">
+                <li>Select <strong>Password Manager</strong> from the sidebar to view stored entries.</li>
+                <li>Click a row to display details in the panel on the right.</li>
+                <li>Enter your safety key and click <strong>Show</strong> to decrypt your password.</li>
+                <li>Use the copy buttons to copy the username or password, or click the globe icon to visit the website.</li>
+                <li>Clicked the trash icon to delete an entry permanently.</li>
+            </ol>
+        </section>
+        <section class="guide-section" style="margin-bottom: 1.5rem;">
+            <h2 style="margin-bottom: 0.5rem;">Security</h2>
+            <p>All passwords are encrypted with AES-256 and require your safety key for decryption. Keep your safety key private and secure.</p>
+        </section>
+    </div>
+</body>
+</html>

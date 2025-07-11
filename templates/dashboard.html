@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassFort Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-text">PassFort</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><i class="fa-solid fa-home"></i> <span class="nav-text">Home</span></a></li>
+                    <li class="active"><a href="{{ url_for('dashboard') }}"><i class="fa-solid fa-th-large"></i> <span class="nav-text">DashBoard</span></a></li>
+                    <li><a href="{{ url_for('add_password') }}"><i class="fa-solid fa-plus"></i> <span class="nav-text">Add Password</span></a></li>
+                    <li><a href="{{ url_for('password_manager') }}"><i class="fa-solid fa-key"></i><span class="nav-text">Password Manager</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-settings">
+                    <i class="fa-solid fa-cog"></i> <span class="btn-text">Settings</span>
+                </button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>DashBoard</h1>
+            </header>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Password Managment</h3>
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <p>Generate and save a secure password.</p>
+                    <a href="{{ url_for('generate_password') }}" class="card-button">Generate Password</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Save New Password</h3>
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </div>
+                    <p>Save your newly generated password to your vault.</p>
+                    <a href="{{ url_for('add_password') }}" class="card-button">New Password</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Website Management</h3>
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <p>Organize your passwords by category.</p>
+                    <button>Manage Categories</button>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Password Strength Analyzer</h3>
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <p>Check how strong your password is.</p>
+                    <a href="{{ url_for('password_strength') }}" class="card-button">Check Strength</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Guide</h3>
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <p>A guide to using PassFort.</p>
+                    <a href="{{ url_for('guide') }}" class="card-button">View Guide</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Manage Account</h3>
+                        <i class="fa-solid fa-user-circle"></i>
+                    </div>
+                    <p>Manage your account settings.</p>
+                    <button>Manage Account</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
